@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/fontello/fontello.css">
+  <link rel="stylesheet" href="styles/index.css">
+  <title>FinKit</title>
+</head>
+<body>
+<div class="wrapper">
+  <!-- HEADER START -->
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <div class="header__lang lang">
+          <div class="lang__item">
+            <input
+              class="header__ru lang__switcher"
+              type="radio"
+              name="lang"
+              id="lang_ru"
+            >
+            <label for="lang_ru">Ru</label>
+          </div>
+          <div class="lang__item">
+            <input
+              class="header__en lang__switcher"
+              type="radio"
+              name="lang"
+              id="lang_en"
+            >
+            <label for="lang_en">En</label>
+          </div>
+
+        </div>
+        <div class="header__left">
+          <h1 class="header__title title">
+            Fin <span class="title--accent">Kit</span>
+          </h1>
+          <p class="header__text">
+            Гибкая мобильная платформа для быстрой реализации инвестиционных сервисов.
+          </p>
+          <button class="button header__button">
+            Заказать демо
+          </button>
+        </div>
+        <div class="header__right">
+          <picture class="header__img">
+            <source
+              class="header__img-item"
+              media="(min-resolution: 2dppx)"
+              srcset="assets/img/header_banner@2x.png"
+            >
+            <img
+              src="assets/img/header_banner.png"
+              alt="Мобильное приложение"
+              class="header__img-item"
+            >
+          </picture>
+        </div>
+      </div>
+      <section class="cards">
+        <ul class="card-list">
+          <li class="card-list__item">
+            <span class="card-list__text">Удобный пользовательский интерфейс</span>
+            <i class="icon-graph card-list__icon"></i>
+          </li>
+          <li class="card-list__item">
+            <span class="card-list__text">Панель администратора для ведения учета</span>
+            <i class="icon-activity card-list__icon"></i>
+          </li>
+          <li class="card-list__item ">
+            <span class="card-list__text"> Простая <br> и быстрая интеграция</span>
+            <i class="icon-filter card-list__icon"></i>
+          </li>
+          <li class="card-list__item">
+            <span class="card-list__text">Гибкая масштабируемая система</span>
+            <i class="icon-setting card-list__icon"></i>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <!-- MAIN CONTENT START -->
+  <main class="main">
+    <section class="products">
+      <div class="container">
+        <div class="products__wrapper">
+          <h2 class="products__title">Наши<span class="title--accent">ключевые продукты</span>для инвестиций</h2>
+          <ul class="products__list products-list">
+            <li class="products-list__item products-item">
+              <div class="products-item__text">
+                <h5 class="products-item__title">
+                  Платформа для автоследования
+                </h5>
+                <p class="products-item__subtitle">
+                  Копирование стратегий в автономном режиме
+                </p>
+              </div>
+              <div class="products-item__img">
+                <figure>
+                  <img
+                    src="assets/img/risk1.png"
+                    srcset="assets/img/risk1@2x.png 2x"
+                    alt="Стратегии"
+                    loading="lazy"
+                    class="products-item__picture"
+                  >
+                </figure>
+              </div>
+            </li>
+            <li class="products-list__item products-item">
+              <div class="products-item__text">
+                <h5 class="products-item__title">
+                  Платформа для робо-эдвайзинга
+                </h5>
+                <p class="products-item__subtitle">
+                  Персонализированный подбор стратегий исходя из заданных параметров
+                </p>
+              </div>
+              <div class="products-item__img">
+                <figure>
+                  <img
+                    src="assets/img/risk2.png"
+                    srcset="assets/img/risk2@2x.png 2x"
+                    alt="Стратегии"
+                    loading="lazy"
+                    class="products-item__picture"
+                  >
+                </figure>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* PRODUCTS STYLES */
+.products-item__picture {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.products__title {
+  margin: 0px auto 44px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.products-list {
+  display: flex;
+}
+
+.products-item {
+  display: flex;
+  background: var(--icon-bg);
+  border-radius: 30px;
+}
+
+.products-item__title {
+  margin-bottom: 7px;
+  font-weight: 600 !important;
+}
+
+@media (min-width: 320px) {
+  .products__title{
+    font-size: 24px;
+    line-height: 130%;
+    margin: 40px auto 24px;
+  }
+  .products-list {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .products-item {
+    flex: 1 1 100%;
+    padding: 25px 20px 0 16px;
+    gap: 15px;
+  }
+  .products-item__img {
+    margin-left: auto;
+    text-align: right;
+  }
+  .products-item__title {
+    font-size: 16px;
+  }
+
+  .products-item__subtitle {
+    font-size: 13px;
+  }
+  .products-item__text {
+    flex: 1 1 80%;
+  }
+  .products-item__img {
+    flex: 1 1 auto;
+  }
+}
+
+@media (min-width: 576px) {
+  .products-item__title {
+    font: var(--font-l);
+  }
+
+  .products-item__subtitle {
+    font: var(--font-m);
+  }
+}
+
+@media (min-width: 768px) {
+  .products {
+    margin-top: 120px;
+  }
+
+  .products__title {
+    font: var(--font-title);
+    max-width: 754px;
+  }
+
+  .products-list {
+    gap: 20px;
+  }
+
+  .products-item {
+    flex: 1 1 50%;
+    padding: 37px 20px 0 30px;
+    gap: 15px;
+  }
+
+  .products-item__text {
+    color: var(--secondary-color);
+    flex: 0 1 40%;
+  }
+
+  .products-item__title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .products-item__subtitle {
+    font-size: 13px;
+  }
+
+  .products-item__img {
+    flex: 0 1 44%;
+    margin-left: auto;
+    text-align: right;
+  }
+}
+
+@media (min-width: 992px) {
+  .products-item__img {
+    flex-grow: 1;
+  }
+  .products-item {
+    gap: 0px;
+  }
+  .products-item__title {
+    font: var(--font-l);
+  }
+
+  .products-item__subtitle {
+    font: var(--font-common);
+  }
+}
+
+@media (min-width: 1200px) {
+
+}

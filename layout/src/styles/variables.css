@@ -1,0 +1,59 @@
+:root {
+  /* ШРИФТЫ */
+  --font-family-main: "Euclid";
+  --line-height-common: 140%;
+
+  /* COMMON FONT */
+  --font-size-common: 14px;
+  --font-common: var(--font-size-common)/var(--line-height-common) var(--font-family-main);
+
+  /* SMALL FONT */
+  --font-size-sm: 16px;
+  --font-sm: var(--font-size-sm)/var(--line-height-common) var(--font-family-main);
+
+  /* MEDIUM FONT */
+  --font-size-m: 18px;
+  --font-m: var(--font-size-m)/var(--line-height-common) var(--font-family-main);
+
+  /* LARGE FONT */
+  --font-size-l: 20px;
+  --font-l: var(--font-size-l)/var(--line-height-common) var(--font-family-main);
+
+  /* EXTRA LARGE */
+  --font-size-xl: 22px;
+  --line-height-xl: 130%;
+  --font-xl: var(--font-size-xl)/var(--line-height-xl) var(--font-family-main);
+
+  /* FONT FOR TITLE */
+  --font-size-title: 38px;
+  --line-height-title: 130%;
+  --font-title: var(--font-size-title)/var(--line-height-title) var(--font-family-main);
+
+  /* ULTRA LARGE FONT, FOR LOGO */
+  --font-size-ultra: 64px;
+  --line-height-ultra: 130%;
+  --font-ultra: var(--font-size-ultra)/var(--line-height-ultra) var(--font-family-main);
+
+
+  /* ЦВЕТА */
+  --main-bg-color: #fff;
+
+  /* CUSTOMIZE ICONS */
+  --icon-color: #0962E8;
+
+  /* FONTS COLORS */
+  --primary-color: #29374E;
+  --secondary-color: #000;
+  --primary-accent-color: var(--icon-color);
+  --secondary-accent-color: #1E2837;
+
+  /* COMPONENTS COLOR */
+  --btn-bg: var(--icon-color);
+  --header-bg-color: #CBECFF;
+  --common-bg-color: var(--header-bg-color);
+  --icon-bg: #EFF9FF;
+
+  /* CONTENT SIZES */
+  --container-xl: 1100px;
+
+}

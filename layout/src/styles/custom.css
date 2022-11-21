@@ -1,0 +1,62 @@
+/* BUTTON */
+.button {
+  color: var(--main-bg-color);
+  background: var(--btn-bg);
+  padding: 15px 20px;
+  border-radius: 12px;
+  font: var(--font-m);
+  position: relative;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(255 255 255 / 30%);
+  border-radius: 5px;
+  transition: all 1s ease;
+}
+
+.button:hover {
+  transform: scale(0.975);
+}
+
+.button:hover::before {
+  width: 100%;
+}
+/* END BUTTON */
+
+/* ---------------------------- */
+
+/* LANG SWITCHER */
+.lang {
+  font: var(--font-common);
+  display: flex;
+  gap: 15px;
+}
+
+.lang__item {
+  position: relative;
+  cursor: pointer;
+}
+
+.lang__switcher {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.lang__switcher + label {
+  padding: 2px 4px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.lang__switcher:checked + label {
+  background: #fff;
+  color: var(--primary-accent-color)
+}
+/* END LANG SWITCHER */

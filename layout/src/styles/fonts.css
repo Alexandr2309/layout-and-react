@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Euclid";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Euclid"),
+    /* Если не получилось, загрузит woff2 */ url("../assets/fonts/EuclidCircularA-Light.woff2") format("woff2"),
+    /* Если браузер не поддерживает woff2, загрузит woff */ url("../assets/fonts/EuclidCircularA-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Euclid";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Euclid"),
+    /* Если не получилось, загрузит woff2 */ url("../assets/fonts/EuclidCircularA-Regular.woff2") format("woff2"),
+    /* Если браузер не поддерживает woff2, загрузит woff */ url("../assets/fonts/EuclidCircularA-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Euclid";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Euclid"),
+    /* Если не получилось, загрузит woff2 */ url("../assets/fonts/EuclidCircularA-Medium.woff2") format("woff2"),
+    /* Если браузер не поддерживает woff2, загрузит woff */ url("../assets/fonts/EuclidCircularA-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Euclid";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Euclid"),
+    /* Если не получилось, загрузит woff2 */ url("../assets/fonts/EuclidCircularA-SemiBold.woff2") format("woff2"),
+    /* Если браузер не поддерживает woff2, загрузит woff */ url("../assets/fonts/EuclidCircularA-SemiBold.woff") format("woff");
+}
