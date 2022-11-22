@@ -4,3 +4,7 @@ body {
   background: var(--main-bg-color);
   font-weight: 400;
 }
+
+.wrapper {
+  padding: 0 0 60px 0;
+}

@@ -27,6 +27,7 @@
 .button:hover::before {
   width: 100%;
 }
+
 /* END BUTTON */
 
 /* ---------------------------- */
@@ -59,4 +60,33 @@
   background: #fff;
   color: var(--primary-accent-color)
 }
+
 /* END LANG SWITCHER */
+.card {
+  background: #FFFFFF;
+  box-shadow: 6px 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+
+  /* ICON SIZES */
+  --default-size: 24px;
+  --big-size: 40px;
+}
+
+.card__text {
+  font: var(--font-common);
+}
+
+.card__icon::before {
+  font-size: var(--default-size);
+}
+.card__icon--big::before {
+  font-size: var(--big-size);
+}
+
+/* CARDS STYLES START */
+
+
+/* CARDS STYLES END */
