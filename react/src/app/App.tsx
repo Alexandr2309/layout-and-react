@@ -1,22 +1,17 @@
-import {
-  MouseEvent, Suspense, useEffect, useState,
-} from 'react';
-import { AppRouter } from 'app/providers/router';
+import { Suspense } from 'react';
 import { Navbar } from 'widgets/Navbar';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Sidebar } from 'widgets/Sidebar';
-import { useTheme } from 'app/providers/ThemeProvider';
+import { MainPage } from 'pages/MainPage';
+import { PageLoader } from 'widgets/PageLoader';
 
 export default function App() {
-  const { theme } = useTheme();
+  const f = '';
 
   return (
     <div className={classNames('App', {}, [theme])}>
       <Navbar />
-      <Suspense fallback="">
-        <div className="content-page">
-          <AppRouter />
-        </div>
+      <Suspense fallback={<PageLoader />}>
+        <MainPage />
       </Suspense>
     </div>
   );

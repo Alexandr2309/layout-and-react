@@ -7,7 +7,6 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
-    'plugin:i18next/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -20,7 +19,6 @@ module.exports = {
   plugins: [
     'react',
     '@typescript-eslint',
-    'i18next',
   ],
   rules: {
     indent: [2, 2],
@@ -41,7 +39,6 @@ module.exports = {
     'no-promise-executor-return': 'warn',
     'no-underscore-dangle': 'warn',
     'import/no-extraneous-dependencies': 'warn',
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
     indent: [2, 2],
     'react/jsx-filename-extension': [
       1,

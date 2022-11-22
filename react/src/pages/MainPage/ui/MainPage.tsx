@@ -1,13 +1,13 @@
 /**
  * Created by Саня on 26.09.2022
  */
-import { useTranslation } from 'react-i18next';
 
 const MainPage = () => {
-  const { t } = useTranslation();
+  const j = '';
+
   return (
     <div>
-      {t('Главная страница')}
+      Главная страница
     </div>
   );
 };
