@@ -7,7 +7,10 @@
 .products__title {
   margin: 0px auto 44px;
   text-align: center;
-  font-weight: 500;
+}
+
+.products__title--accent {
+  padding: 0;
 }
 
 .products-list {
@@ -27,8 +30,6 @@
 
 @media (min-width: 320px) {
   .products__title{
-    font-size: 24px;
-    line-height: 130%;
     margin: 40px auto 24px;
   }
   .products-list {
@@ -60,10 +61,6 @@
 }
 
 @media (min-width: 576px) {
-  .products-item__title {
-    font: var(--font-l);
-  }
-
   .products-item__subtitle {
     font: var(--font-m);
   }
@@ -75,7 +72,6 @@
   }
 
   .products__title {
-    font: var(--font-title);
     max-width: 754px;
   }
 

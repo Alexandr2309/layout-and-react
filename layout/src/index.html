@@ -15,19 +15,20 @@
   <header class="header">
     <div class="container">
       <div class="header__wrapper">
-        <div class="header__lang lang">
+        <div class="lang header__lang">
           <div class="lang__item">
             <input
-              class="header__ru lang__switcher"
+              class="lang__switcher header__ru"
               type="radio"
               name="lang"
               id="lang_ru"
+              checked
             >
             <label for="lang_ru">Ru</label>
           </div>
           <div class="lang__item">
             <input
-              class="header__en lang__switcher"
+              class="lang__switcher header__en"
               type="radio"
               name="lang"
               id="lang_en"
@@ -92,7 +93,7 @@
     <section class="products">
       <div class="container">
         <div class="products__wrapper">
-          <h2 class="products__title">Наши<span class="title--accent">ключевые продукты</span>для инвестиций</h2>
+          <h2 class="section-title products__title">Наши <span class="title--accent products__title--accent">ключевые продукты</span> для инвестиций</h2>
           <ul class="products__list products-list">
             <li class="products-list__item products-item">
               <div class="products-item__text">
@@ -147,7 +148,7 @@
       <div class="container">
         <div class="benefits__wrapper">
           <div class="benefits__left">
-            <h2 class="benefits__title"><span class="title--accent benefits__title--accent">Представляем ценность</span>
+            <h2 class="section-title benefits__title"><span class="title--accent benefits__title--accent">Представляем ценность</span>
               для брокера и банка
             </h2>
             <p class="benefits__subtitle">
@@ -161,23 +162,47 @@
           <div class="benefits__right">
             <ul class="cards benefits-cards">
               <li class="card benefits-cards__item">
-                <i class="icon-coin card__icon--big benefits-cards__icon"></i>
+                <figure class="benefits-cards__image">
+                    <img
+                      src="assets/icons/coin-mobile.svg"
+                      alt="Монеты"
+                      class="benefits-cards__icon"
+                    >
+                </figure>
                 <span class="card__text benefits-cards__text">
                   Эĸономим время и деньги на запусĸ digital
                 </span>
               </li>
               <li class="card benefits-cards__item">
-                <i class="icon-loalty card__icon--big benefits-cards__icon"></i>
+                <figure class="benefits-cards__image">
+                  <img
+                    src="assets/icons/person-mobile.svg"
+                    alt="Человек"
+                    class="benefits-cards__icon"
+                  >
+                </figure>
                 <span class="card__text benefits-cards__text">Создаем канал привлечения новых клиентов</span>
               </li>
               <li class="card benefits-cards__item">
-                <i class="icon-start card__icon--big benefits-cards__icon"></i>
+                <figure class="benefits-cards__image">
+                  <img
+                    src="assets/icons/start-mobile.svg"
+                    alt="Старт"
+                    class="benefits-cards__icon"
+                  >
+                </figure>
                 <span class="benefits-cards__text">
                   Помогаем увеличить выручку путем запуска нового продукта
                 </span>
               </li>
               <li class="card benefits-cards__item">
-                <i class="icon-loalty card__icon--big benefits-cards__icon"></i>
+                <figure class="benefits-cards__image">
+                  <img
+                    src="assets/icons/loalty-mobile.svg"
+                    alt="Лояльность"
+                    class="benefits-cards__icon"
+                  >
+                </figure>
                 <span class="card__text benefits-cards__text">
                   Повышаем лояльность действующих клиентов
                 </span>
