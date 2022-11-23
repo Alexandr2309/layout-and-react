@@ -8,7 +8,7 @@ export default function App() {
   const f = '';
 
   return (
-    <div className={classNames('App', {}, [theme])}>
+    <div className={classNames('App', {}, [])}>
       <Navbar />
       <Suspense fallback={<PageLoader />}>
         <MainPage />

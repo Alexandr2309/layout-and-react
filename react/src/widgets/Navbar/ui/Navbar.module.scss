@@ -1,16 +1,18 @@
-// Navbar styles
+/* Navbar styles */
 .Navbar {
   display: flex;
   align-items: center;
-  height: var(--navbar-height);
-  background: var(--inverted-bg-color);
-  padding: 20px;
+  justify-content: space-between;
 }
 
-.links {
-  margin-left: auto;
+.title {
+  font: var(--font-l);
 }
 
-.mainLink {
-  margin-right: 25px;
+.button {
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  background: none;
+  border-radius: 20px;
 }

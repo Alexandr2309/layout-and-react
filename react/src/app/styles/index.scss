@@ -1,13 +1,17 @@
 @import "./reset";
 @import "./variables/global";
-@import "./theme/dark";
-@import "./theme/normal";
+
+body {
+  font: var(--font-family-main);
+  color: var(--primary-color);
+}
 
 .App {
   font: var(--font-m);
   background: var(--bg-color);
   color: var(--primary-color);
   min-height: 100vh;
+  padding: 16px 27px;
 }
 
 .content-page {

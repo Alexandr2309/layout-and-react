@@ -2,6 +2,11 @@
  * Created by Саня on 26.09.2022
  */
 import { classNames } from 'shared/lib/classNames/classNames';
+import { useSelector } from 'react-redux';
+import { getTasksTitle } from 'entities/Tasks/model/selectors/tasksSelector';
+import { Text } from 'shared/ui/Text/Text';
+import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import ArrowDownload from 'shared/assets/icons/arrow_download.svg';
 import cls from './Navbar.module.scss';
 
 type INavbarProps = {
@@ -9,9 +14,21 @@ type INavbarProps = {
 };
 
 export const Navbar = ({ className }: INavbarProps) => {
-  const f = '';
+  const title = useSelector(getTasksTitle);
 
   return (
-    <div className={classNames(cls.Navbar, {}, [className])} />
+    <div className={classNames(cls.Navbar, {}, [className])}>
+      <Text
+        title={title}
+        className={cls.title}
+      />
+      <Button
+        theme={ThemeButton.OUTLINED}
+        className={cls.button}
+      >
+        <ArrowDownload />
+        Export
+      </Button>
+    </div>
   );
 };
