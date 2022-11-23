@@ -45,6 +45,7 @@ module.exports = {
       { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
     ],
     'no-dupe-keys': 'warn',
+    'no-param-reassign': 'off',
   },
   globals: {
     __IS__DEV__: true,

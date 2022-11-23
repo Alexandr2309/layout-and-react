@@ -1,6 +1,7 @@
 import { configureStore, ReducersMapObject } from '@reduxjs/toolkit';
 import { tasksReducer } from 'entities/Tasks';
 import { $api } from 'shared/api';
+import { create } from 'domain';
 import { IStateSchema, IThunkExtraArgs } from './stateSchema';
 
 export function createReduxStore() {
@@ -22,3 +23,5 @@ export function createReduxStore() {
     }),
   });
 }
+
+export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch'];

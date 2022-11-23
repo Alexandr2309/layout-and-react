@@ -1,3 +1,45 @@
 .Accordion {
-  /* empty */
+  height: 100%;
+}
+
+.view {
+  display: flex;
+  align-items: center;
+  padding-bottom: 12px;
+  padding-left: 20px;
+}
+
+.line {
+  height: 1px;
+  background-color: var(--border-color);
+}
+
+.toggler {
+  margin-right: 6px;
+  transition: all 0.25s linear;
+  transform: rotate(180deg);
+
+  &.show {
+    transform: rotate(0deg);
+  }
+}
+
+.visible {
+  opacity: 0;
+  position: relative;
+  z-index: -1;
+}
+
+.contentWrapper {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.2s linear;
+
+  &.show {
+    height: auto;
+  }
+}
+
+.content {
+  padding: 12px 0;
 }
