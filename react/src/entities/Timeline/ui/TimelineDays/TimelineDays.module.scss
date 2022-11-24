@@ -1,0 +1,13 @@
+.TimelineDays {
+  display: flex;
+  align-items: center;
+  background: var(--bg-gray-color);
+}
+
+.day:nth-child(6) {
+  color: var(--muted-color);
+}
+
+.day:nth-child(7) {
+  color: var(--muted-color);
+}

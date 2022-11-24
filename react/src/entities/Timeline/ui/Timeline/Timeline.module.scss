@@ -1,0 +1,18 @@
+.Timeline {
+  max-width: 100%;
+  overflow: auto;
+  display: flex;
+  cursor: grab;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  -ms-overflow-style: none;
+}
+
+.week {
+  flex: 1 0 148px;
+}

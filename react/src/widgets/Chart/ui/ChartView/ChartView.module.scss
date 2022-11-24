@@ -1,0 +1,22 @@
+.ChartView {
+  height: 80vh;
+  backdrop-filter: drop-shadow(42px 42px 102px blue);
+  position: relative;
+  overflow: hidden;
+  z-index: 11;
+  background-color: #fff;
+}
+
+.timeline {
+  height: 100%;
+}
+
+.shadow {
+  position: fixed;
+  right: 0;
+  transform: translateX(100%);
+  width: var(--day-cell-width);
+  min-height: 100%;
+  box-shadow: -4px 2px 8px var(--border-color);
+  z-index: 111;
+}

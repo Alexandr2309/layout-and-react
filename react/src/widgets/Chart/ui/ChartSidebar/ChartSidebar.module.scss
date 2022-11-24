@@ -1,0 +1,30 @@
+.ChartSidebar {
+  // empty
+}
+
+.header {
+  padding: 0 20px;
+  font: var(--font-m);
+  font-weight: 500;
+  color: var(--secondary-color);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-gray-color);
+}
+
+.accordion {
+  padding: 12px 20px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--border-color);
+  }
+}

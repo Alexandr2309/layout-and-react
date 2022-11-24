@@ -6,12 +6,16 @@ body {
   color: var(--primary-color);
 }
 
+html {
+  min-height: 100%;
+}
+
 .App {
   font: var(--font-m);
   background: var(--bg-color);
   color: var(--primary-color);
   min-height: 100vh;
-  padding: 16px 27px;
+  padding: 16px 24px;
 }
 
 .content-page {

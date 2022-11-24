@@ -1,0 +1,18 @@
+.TimelineDayItem {
+  font: var(--font-s);
+  padding: 4px 8px;
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: var(--border-color);
+  position: relative;
+
+  &::before {
+    content: "";
+    background-color: var(--border-color);
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 1px;
+  }
+}

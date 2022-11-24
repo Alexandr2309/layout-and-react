@@ -1,0 +1,30 @@
+.StripeWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.Stripe {
+  border-radius: 4px;
+  border: 1px solid inherit;
+  height: 24px;
+}
+
+.text {
+  font: var(--font-m);
+}
+
+.blue {
+  background-color: var(--stripe-blue);
+  border-color: #497cf6;
+}
+
+.yellow {
+  background-color: var(--stripe-yellow);
+  border-color: #ffa530;
+}
+
+.green {
+  background-color: var(--stripe-green);
+  border-color: #2db77b;
+}

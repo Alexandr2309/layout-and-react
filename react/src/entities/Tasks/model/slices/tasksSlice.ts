@@ -21,9 +21,9 @@ export const tasksSlice = createSlice({
     setPeriod: (state, action: PayloadAction<string>) => {
       state.period = action.payload;
     },
-    setTasks: (state, action: PayloadAction<IResponseTask[]>) => {
+    setTasks: (state, action: PayloadAction<IResponseTask>) => {
       const normalizeTasksObj = getNormalizeTasks();
-      normalizeTasksObj.func(action.payload);
+      normalizeTasksObj.func([action.payload]);
 
       state.tasks = Array.from(normalizeTasksObj.resultTasks);
     },
@@ -33,7 +33,7 @@ export const tasksSlice = createSlice({
       state.error = undefined;
       state.isLoading = true;
     })
-      .addCase(fetchTasksData.fulfilled, (state, action) => {
+      .addCase(fetchTasksData.fulfilled, (state) => {
         state.error = undefined;
         state.isLoading = false;
       })

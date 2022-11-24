@@ -22,6 +22,7 @@ module.exports = {
   ],
   rules: {
     indent: [2, 2],
+    'max-len': ['error', { code: 120 }],
     quotes: [1, 'single', { avoidEscape: true, allowTemplateLiterals: true }],
     '@typescript-eslint/naming-convention': 'off',
     'react/jsx-indent': [2, 2],

@@ -3,7 +3,7 @@
  */
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useSelector } from 'react-redux';
-import { getTasksTitle } from 'entities/Tasks/model/selectors/tasksSelector';
+import { getTasksPeriod, getTasksTitle } from 'entities/Tasks/model/selectors/tasksSelector';
 import { Text } from 'shared/ui/Text/Text';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import ArrowDownload from 'shared/assets/icons/arrow_download.svg';
@@ -15,11 +15,12 @@ type INavbarProps = {
 
 export const Navbar = ({ className }: INavbarProps) => {
   const title = useSelector(getTasksTitle);
+  const period = useSelector(getTasksPeriod);
 
   return (
     <div className={classNames(cls.Navbar, {}, [className])}>
       <Text
-        title={title}
+        title={`${title} / ${period}`}
         className={cls.title}
       />
       <Button

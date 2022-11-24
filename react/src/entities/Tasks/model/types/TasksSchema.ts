@@ -12,7 +12,8 @@ export interface ITask {
   title: string,
   period_start: DateYMDString,
   period_end: DateYMDString,
-  sub?: number[]
+  sub?: number[];
+  nesting?: number;
 }
 
 export type IResponseTask = Omit<ITask, 'sub'> & { sub?: IResponseTask[] }

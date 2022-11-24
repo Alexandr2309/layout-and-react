@@ -1,11 +1,10 @@
 import { Suspense, useEffect } from 'react';
 import { Navbar } from 'widgets/Navbar';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { MainPage } from 'pages/MainPage';
 import { PageLoader } from 'widgets/PageLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { fetchTasksData } from 'entities/Tasks/model/services/fetchTasksData/fetchTasksData';
-import { getNormalizeTasks } from 'entities/Tasks/lib';
+import { Chart } from 'widgets/Chart';
 
 export default function App() {
   const dispatch = useAppDispatch();
@@ -18,7 +17,7 @@ export default function App() {
     <div className={classNames('App', {}, [])}>
       <Navbar />
       <Suspense fallback={<PageLoader />}>
-        <MainPage />
+        <Chart />
       </Suspense>
     </div>
   );

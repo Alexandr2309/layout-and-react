@@ -1,0 +1,13 @@
+.TimelineWeekHeader {
+  padding: 4px 0;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-width: 0 1px 1px 0;
+  border-style: solid;
+  border-color: var(--border-color);
+  font: var(--font-s);
+  font-weight: 500;
+  background: var(--bg-gray-color);
+}

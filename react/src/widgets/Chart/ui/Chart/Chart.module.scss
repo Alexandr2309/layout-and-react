@@ -1,0 +1,15 @@
+.Chart {
+  border-radius: 10px 0 0 10px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  display: flex;
+}
+
+.sidebar {
+  flex: 1 1 23.5%;
+  border-right: 1px solid var(--border-color);
+}
+
+.view {
+  flex: 1 1 76.5%;
+}

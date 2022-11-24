@@ -1,8 +1,10 @@
 import { ITasksSchema } from 'entities/Tasks';
 import { AxiosInstance } from 'axios';
+import { ITimelineSchema } from 'entities/Timeline';
 
 export interface IStateSchema {
-  tasks: ITasksSchema
+  tasks: ITasksSchema;
+  timeline: ITimelineSchema
 }
 
 export interface IThunkExtraArgs {

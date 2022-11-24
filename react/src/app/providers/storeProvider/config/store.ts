@@ -1,12 +1,13 @@
 import { configureStore, ReducersMapObject } from '@reduxjs/toolkit';
 import { tasksReducer } from 'entities/Tasks';
 import { $api } from 'shared/api';
-import { create } from 'domain';
+import { timelineReducer } from 'entities/Timeline';
 import { IStateSchema, IThunkExtraArgs } from './stateSchema';
 
 export function createReduxStore() {
   const rootReducers: ReducersMapObject<IStateSchema> = {
     tasks: tasksReducer,
+    timeline: timelineReducer,
   };
 
   const extraArgs: IThunkExtraArgs = {
