@@ -41,7 +41,7 @@ const Accordion: FC<IAccordionProps> = ({
         <Button
           onClick={setIsShow}
           theme={ThemeButton.CLEAR}
-          className={classNames(cls.toggler, modsToggler , [])}
+          className={classNames(cls.toggler, modsToggler, [])}
         >
           <ChevronDown />
         </Button>

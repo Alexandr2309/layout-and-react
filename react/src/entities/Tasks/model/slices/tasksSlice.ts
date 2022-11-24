@@ -1,4 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { fetchTasksData } from 'entities/Tasks/model/services/fetchTasksData/fetchTasksData';
+import { getNormalizeTasks } from 'entities/Tasks/lib';
 import { IResponseTask, ITask, ITasksSchema } from '../types/TasksSchema';
 
 const initialState: ITasksSchema = {
@@ -19,17 +21,26 @@ export const tasksSlice = createSlice({
     setPeriod: (state, action: PayloadAction<string>) => {
       state.period = action.payload;
     },
-    setTasks: (state, action: PayloadAction<IResponseTask>) => {
-      const excludeId = [];
-      // const resultTasks = [];
+    setTasks: (state, action: PayloadAction<IResponseTask[]>) => {
+      const normalizeTasksObj = getNormalizeTasks();
+      normalizeTasksObj.func(action.payload);
 
-      const subTasks = action.payload.sub.map((sub) => {
-        excludeId.push(sub.id);
-        return sub.id;
-      });
-
-      state.tasks.push({ ...action.payload, sub: subTasks });
+      state.tasks = Array.from(normalizeTasksObj.resultTasks);
     },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(fetchTasksData.pending, (state) => {
+      state.error = undefined;
+      state.isLoading = true;
+    })
+      .addCase(fetchTasksData.fulfilled, (state, action) => {
+        state.error = undefined;
+        state.isLoading = false;
+      })
+      .addCase(fetchTasksData.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      });
   },
 });
 

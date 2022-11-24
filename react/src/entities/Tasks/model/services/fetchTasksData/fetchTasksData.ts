@@ -1,8 +1,9 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { ITask } from 'entities/Tasks/model/types/TasksSchema';
 import { IThunkApiConfig } from 'app/providers/storeProvider';
+import { tasksActions } from 'entities/Tasks';
+import { getNormalizeTasks } from '../../../lib';
 
-export const fetchTasksData = createAsyncThunk<ITask[],
+export const fetchTasksData = createAsyncThunk<void,
 void,
 IThunkApiConfig<string>>(
   'fetchTasksData',
@@ -12,12 +13,12 @@ IThunkApiConfig<string>>(
     try {
       // use default base url, bind in api config
       const response = await extra.api.get('');
-      console.log(response);
+
       if (!response) {
         rejectWithValue('error');
       }
 
-      return response.data;
+      dispatch(tasksActions.setTasks(response.data.chart));
     } catch (e) {
       throw new Error(e);
     }
