@@ -1,7 +1,3 @@
-.ChartSidebar {
-  // empty
-}
-
 .header {
   padding: 0 20px;
   font: var(--font-m);
@@ -15,8 +11,10 @@
 }
 
 .accordion {
-  padding: 12px 20px;
+  padding: 12px 0;
   position: relative;
+  display: flex;
+  align-items: center;
 
   &::before {
     content: "";

@@ -26,6 +26,7 @@ module.exports = {
     quotes: [1, 'single', { avoidEscape: true, allowTemplateLiterals: true }],
     '@typescript-eslint/naming-convention': 'off',
     'react/jsx-indent': [2, 2],
+    '@typescript-eslint/indent': [2, 2],
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/indent': [2, 2],
     'react/jsx-props-no-spreading': 'warn',

@@ -9,28 +9,27 @@ import cls from './Accordion.module.scss';
 
 export interface IAccordionProps extends HTMLProps<HTMLDivElement> {
   className?: string;
-  viewCls?: string;
   task?: ReactNode;
   style?: CSSProperties;
-  contentStyle?: CSSProperties
+  contentStyle?: CSSProperties;
+  dataAtrs?: Record<string, string>;
+  cb?: (...params: any[]) => void | any
 }
 
 const Accordion = memo(({
   children,
   className,
-  viewCls,
   task,
   style,
   contentStyle,
+  dataAtrs,
+  cb,
 }: IAccordionProps) => {
   const [show, setShow] = useState<boolean>(false);
-  const [heightEl, setHeightEl] = useState<number>(0);
-  const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    // eslint-disable-next-line no-unused-expressions
-    ref.current && setHeightEl(ref.current.scrollHeight + 24);
-  }, []);
+    cb?.(show);
+  }, [show]);
 
   const setIsShow = useCallback(() => {
     setShow((s) => !s);
@@ -42,11 +41,14 @@ const Accordion = memo(({
   };
 
   return (
-    <div className={classNames(cls.Accordion, {}, [])}>
+    <div
+      {...dataAtrs}
+      className={classNames(cls.Accordion, {}, [])}
+    >
       <div className={cls.wrapper}>
         <div
           style={style}
-          className={classNames(cls.view, {}, [viewCls, className])}
+          className={classNames(cls.view, {}, [className])}
         >
           <Button
             onClick={setIsShow}
@@ -57,19 +59,14 @@ const Accordion = memo(({
           </Button>
           {task}
         </div>
-        <div className={cls.line} />
-        <div
-          ref={ref}
-          className={classNames(cls.contentWrapper, { [cls.show]: show }, [])}
-          style={{ height: show ? heightEl : 0 }}
-        >
+        {show && (
           <div
             style={contentStyle}
             className={cls.content}
           >
             {children}
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

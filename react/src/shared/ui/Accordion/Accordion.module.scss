@@ -5,13 +5,7 @@
 .view {
   display: flex;
   align-items: center;
-  // padding-bottom: 12px;
-  // padding-left: 20px;
-}
-
-.line {
-  // height: 1px;
-  // background-color: var(--border-color);
+  padding: 12px 0;
 }
 
 .toggler {
@@ -32,7 +26,6 @@
 
 .contentWrapper {
   height: 0;
-  padding: inherit;
   overflow: hidden;
   transition: height 0.2s linear;
 
@@ -42,5 +35,5 @@
 }
 
 .content {
-  // padding: inherit;
+  height: 100%;
 }

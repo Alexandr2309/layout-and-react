@@ -30,11 +30,5 @@ IThunkApiConfig<string>>(
 
     dispatch(timelineActions.setEndMonth(monthEnd - 1));
     dispatch(timelineActions.setStartMonth(minMonth - 1));
-
-    // Начало и конец периода в дате
-    // dispatch(timelineActions.setStartDate(minDate));
-    // dispatch(timelineActions.setEndDate(
-    //   endDateState.split('.').reverse().join('-'),
-    // ));
   },
 );

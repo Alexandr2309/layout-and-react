@@ -5,6 +5,7 @@ import { getTasksData, getTasksIsLoading } from 'entities/Tasks';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { timelineActions } from 'entities/Timeline';
 import { TasksStripes } from 'entities/Tasks/ui/TasksStripes/TasksStripes';
+import { Portal } from 'shared/ui/Portal';
 import { getEndMonth, getStartMonth } from '../../model/selectors/getMonths';
 import { dayInMonths, dayInMonthsWithName } from '../../model/types/time';
 import { setMonths } from '../../model/services/setMonths/setMonths';
@@ -64,7 +65,13 @@ export const Timeline = memo((props: TimelineProps) => {
           />
         )
         : null))}
-      {fullWeeks && <TasksStripes />}
+      {fullWeeks && (
+        <Portal>
+          <TasksStripes
+            days={fullWeeks.dayMonthsWithNames}
+          />
+        </Portal>
+      )}
     </div>
   );
 });

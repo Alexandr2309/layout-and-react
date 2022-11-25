@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Icon.module.scss';
 import { IIconBlock } from '../model/types/icon';
@@ -6,17 +6,23 @@ import { IIconBlock } from '../model/types/icon';
 export interface IconProps {
   className?: string;
   icon: IIconBlock;
-  count?: number;
-  label?: string
+  count?: number | string;
+  label?: string;
+  dataAtrs?: Record<string, string>
+  styles?: CSSProperties
 }
 
 export const Icon = (props: IconProps) => {
   const {
-    className, icon, label, count,
+    className, icon, label, count, styles, dataAtrs,
   } = props;
 
   return (
-    <div className={classNames(cls.Icon, {}, [className])}>
+    <div
+      style={styles}
+      className={classNames(cls.Icon, {}, [className])}
+      {...dataAtrs}
+    >
       <div
         className={classNames(cls.iconWrapper, {}, [icon.className])}
       >

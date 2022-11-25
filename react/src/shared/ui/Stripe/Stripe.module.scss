@@ -1,12 +1,15 @@
 .StripeWrapper {
+  position: absolute;
   display: flex;
   align-items: center;
   gap: 8px;
+  z-index: 999;
 }
 
 .Stripe {
   border-radius: 4px;
-  border: 1px solid inherit;
+  border-width: 1px;
+  border-style: solid;
   height: 24px;
 }
 
@@ -15,16 +18,16 @@
 }
 
 .blue {
-  background-color: var(--stripe-blue);
-  border-color: #497cf6;
+  background-color: var(--stripe-bg-blue);
+  border-color: var(--stripe-blue);
 }
 
 .yellow {
-  background-color: var(--stripe-yellow);
-  border-color: #ffa530;
+  background-color: var(--stripe-bg-yellow);
+  border-color: var(--stripe-yellow);
 }
 
 .green {
-  background-color: var(--stripe-green);
-  border-color: #2db77b;
+  background-color: var(--stripe-bg-green);
+  border-color: var(--stripe-green);
 }

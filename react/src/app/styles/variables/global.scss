@@ -1,6 +1,6 @@
 :root {
   /* ШРИФТЫ */
-  --font-family-main: "Roboto";
+  --font-family-main: "Roboto", sans-serif;
   --font-size-s: 12px;
   --font-line-s: 16px;
   --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
@@ -27,6 +27,9 @@
   --stripe-blue: #497cf6;
   --stripe-yellow: #ffa530;
   --stripe-green: #2db77b;
+  --stripe-bg-blue: #e2ebff;
+  --stripe-bg-yellow: #fff2e0;
+  --stripe-bg-green: #cff0d6;
 
   /* Размеры */
   --day-cell-width: 22px;
